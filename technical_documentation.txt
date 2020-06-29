@@ -1,0 +1,33 @@
+1. PhoneBook
+  @collection: List
+		
+  #add_person 
+  input: Person
+  return: True
+
+  #remove_person 
+  input: Person
+  return: True
+  
+  #sort
+  input: None
+  return: Sorted collection of Person instances 
+
+  #find_by
+  input: str
+  output: Person instance or None
+  
+
+2. Person
+  @first_name: str
+  @last_name: str
+  @phone_number: str
+
+
+3. Application
+  @file_path: str
+  
+  #run
+  input: None
+  return: None
+
