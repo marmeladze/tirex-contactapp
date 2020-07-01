@@ -12,6 +12,21 @@ class PhoneBook:
 			return True
 		return False 
 
+	def sort_by(self, attr="first_name"):
+		self.collection.sort(key=lambda p: getattr(p, attr))
+		return self.collection
+
+	def find_by(self, attr, value):
+		try:
+			name = [person for person in self.collection if getattr(person, attr) == value]
+			name_generator = next(person for person in self.collection if getattr(person, attr) == value)
+			return name_generator
+		except AttributeError as e:
+			print('Error')
+			return []
+
+
+
 
 class Person:
 	def __init__(self, first_name, last_name, phone_number):
