@@ -80,7 +80,22 @@ class TestPhoneBook(unittest.TestCase):
         self.pb.add_person(person_two)
         result = self.pb.find_by("first_name", "Lamar")
         self.assertEqual(result, person)
-
+    
+    def test_can_find_by_last_name(self):
+        person = Person(first_name="Lamar", last_name="Taylor", phone_number="768540")
+        person_two = Person(first_name="Cash", last_name="Franklin", phone_number="990540")
+        self.pb.add_person(person)
+        self.pb.add_person(person_two)
+        result = self.pb.find_by("last_name", "Taylor")
+        self.assertEqual(result, person)
+    
+    def test_can_find_by_phone_number(self):
+        person = Person(first_name="Lamar", last_name="Taylor", phone_number="768540")
+        person_two = Person(first_name="Cash", last_name="Franklin", phone_number="990540")
+        self.pb.add_person(person)
+        self.pb.add_person(person_two)
+        result = self.pb.find_by("phone_number", "768540")
+        self.assertEqual(result, person)
 
 
 if __name__ == '__main__':
