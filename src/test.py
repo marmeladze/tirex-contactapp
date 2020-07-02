@@ -98,5 +98,9 @@ class TestPhoneBook(unittest.TestCase):
         self.assertEqual(result, person)
 
 
+class TestRemovePersonStory(unittest.TestCase):
+    def can
+
+
 if __name__ == '__main__':
     unittest.main()
