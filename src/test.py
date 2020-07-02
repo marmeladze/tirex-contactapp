@@ -1,4 +1,5 @@
 from app.models import PhoneBook, Person
+from app.stories import RemoveUserStory, FindUserStory
 import unittest
 
 
@@ -99,7 +100,27 @@ class TestPhoneBook(unittest.TestCase):
 
 
 class TestRemovePersonStory(unittest.TestCase):
-    def can
+    
+    def setUp(self):
+        self.pb = PhoneBook()
+
+    def can_find_person_that_should_be_removed(self):
+        person = Person(first_name="Lamar", last_name="Taylor", phone_number="768540")
+        person_two = Person(first_name="Cash", last_name="Franklin", phone_number="990540")
+        self.pb.add_person(person)
+        self.pb.add_person(person_two)
+        result = self.pb.find_person('Lamar')
+        self.assertEqual(result, person)
+
+    def test_can_remove_from_contacts(self):
+        person = Person(first_name="Lamar", last_name="Taylor", phone_number="768540")
+        person_two = Person(first_name="Cash", last_name="Franklin", phone_number="990540")
+        self.pb.add_person(person)
+        self.pb.add_person(person_two)
+        # result = self.pb.find_person('Lamar')
+        better_result = self.pb.remove_from_contacts('Lamar')
+        self.assertTrue(result)
+
 
 
 if __name__ == '__main__':

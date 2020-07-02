@@ -1,0 +1,32 @@
+#    Remove person from contact list.
+#  --------------------------------------
+#
+#   Ask user:   Enter the contact first name:
+#   Or ask:     Enter the contact last name:
+#
+#   if contact is in contact list:
+#
+#   Ask user: Are you sure that you want to delete contact from list?: (yes or no?)
+#   
+#   if user chooses yes:
+#    
+#   Removing contact drom contact list.
+#
+#
+#   if user chooses no:
+#
+#   Message user: 'Contact is not removed from contact list' or something like this.
+#
+#   if user types something else:
+#
+#   Message user: 'Command not found'
+#
+#
+#   and if contact doesnt exist:
+#
+#   Message user: 'This contact doesnt exist.'
+#   
+#   
+#
+#
+#

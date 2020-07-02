@@ -1,5 +1,14 @@
 import os
+from app.models import PhoneBook, Person
+from app.stories import FindUserStory, RemoveUserStory
 from config import app
+
+
+phone_book = PhoneBook()
+find_user_story = FindUserStory(phone_book)
+keyword = input("Enter keyword")
+find_user_story.run(keyword)
+
 
 class Application:
     def __init__(self, conf):
