@@ -5,13 +5,21 @@ class Config:
 	DEBUG = True
 
 class TestConfig(Config):
-	ENV = 'test'
+	ROCKETS = True
+	SPACE_SHIPS = False
+	NAME = "Ziya"
 
 class DevelopmentConfig(Config):
-	ENV = 'development'
+	ROCKETS = False
+	SPACE_SHIPS = True
+	NAME = "Ayiz"
+
 
 class ProdutcionConfig(Config):
-	ENV = 'production'
+	ROCKETS = None
+	SPACE_SHIPS = None
+	NAME = "/\/\/"
+
 
 
 app = { 

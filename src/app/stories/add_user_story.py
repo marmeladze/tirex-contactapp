@@ -1,0 +1,2 @@
+class AddUserStory:
+    pass
