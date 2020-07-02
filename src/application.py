@@ -1,7 +1,7 @@
 import os
 from config import app
 from models import Person, PhoneBook
-from stories import FindUserStory
+from app.stories import FindUserStory
 
 
 
