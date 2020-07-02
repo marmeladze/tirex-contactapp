@@ -23,9 +23,5 @@ class FindUserStory:
     def validate_input(self, keyword):
         return False if "%" in keyword else True
 
-    def validation_error_message(validated):
+    def validation_error_message(self,validated):
         return {"message": "Keyword can not contain %"}
-
-
-
-
