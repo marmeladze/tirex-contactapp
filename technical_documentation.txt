@@ -15,7 +15,7 @@
 
   #find_by
   input: str
-  output: Person instance or None
+  output: Collection of Person instances or None
   
 
 2. Person
