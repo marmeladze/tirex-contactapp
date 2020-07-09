@@ -1,0 +1,9 @@
+Add=> name,last_name,phone_number
+
+Find=> keyword
+
+List=> 
+
+Remove=> phone_number
+
+Modify=> phone_number
